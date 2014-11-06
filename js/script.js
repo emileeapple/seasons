@@ -9,6 +9,12 @@ var MP;
 var wo;
 var fgrad;
 
+function preload(){
+ night = loadSound('../Sounds/ambient_night.mp3');
+ day = loadSound('../Sounds/birds.wav');
+
+};
+
 function setup(){
 	createCanvas(windowWidth, windowHeight);
 	var canvas = document.getElementById('defaultCanvas');
@@ -31,6 +37,7 @@ function setup(){
     winter = paper.project.importSVG(document.getElementById('winter'));
 
     winter.position = new paper.Point(windowWidth/2,windowHeight/1.3);
+
 };
 
 function draw(){
@@ -48,8 +55,6 @@ function draw(){
 	if(winter.opacity <= 1){
 		winter.opacity = fgrad;
 	};
-
-
 
 
 
