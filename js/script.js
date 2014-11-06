@@ -8,6 +8,7 @@ var spring;
 var MP;
 var wo;
 var fgrad;
+var cloud;
 
 function preload(){
  night = loadSound('../Sounds/ambient_night.mp3');
@@ -20,6 +21,7 @@ function setup(){
 	var canvas = document.getElementById('defaultCanvas');
 	paper.setup(canvas);
 	grad = paper.project.importSVG(document.getElementById('svg'));
+	cloud = paper.project.importSVG(document.getElementById('cloud'));
     
     radsq = pow(windowWidth/2,2)+pow(windowHeight,2);
     dia = sqrt(radsq);
