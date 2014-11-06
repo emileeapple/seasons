@@ -22,6 +22,8 @@ function setup(){
 	paper.setup(canvas);
 	grad = paper.project.importSVG(document.getElementById('svg'));
 	cloud = paper.project.importSVG(document.getElementById('cloud'));
+	cloud.position.y = random(0, 200);
+	cloud.accum = random( .25, 2);
     
     radsq = pow(windowWidth/2,2)+pow(windowHeight,2);
     dia = sqrt(radsq);
@@ -58,7 +60,12 @@ function draw(){
 		winter.opacity = fgrad;
 	};
 
+	cloud.position.x += 10*MP + cloud.accum;
+	if(cloud.position.x >= windowWidth){
+		cloud.position.x=0
+		cloud.position.y = random(0, 200);
 
+	}
 
 
 	paper.view.draw();
@@ -67,3 +74,20 @@ function draw(){
 
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
