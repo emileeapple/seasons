@@ -32,6 +32,14 @@ function setup(){
 	cloud3 = paper.project.importSVG(document.getElementById('cloud3'));
 	cloud3.position.y = random(200, 500);
 	cloud3.accum = random( 1, 2);
+
+	cloud4 = paper.project.importSVG(document.getElementById('cloud4'));
+	cloud4.position.y = random(300, 600);
+	cloud4.accum = random( .5, 3);
+
+	cloud5 = paper.project.importSVG(document.getElementById('cloud5'));
+	cloud5.position.y = random(100, 300);
+	cloud5.accum = random( .5, 3);
     
     radsq = pow(windowWidth/2,2)+pow(windowHeight,2);
     dia = sqrt(radsq);
@@ -82,10 +90,24 @@ function draw(){
 
 	}
 
-	cloud3.position.x += .5*MP + cloud3.accum;
+	cloud3.position.x += 3*MP + cloud3.accum;
 	if(cloud3.position.x >= windowWidth){
 		cloud3.position.x=0
 		cloud3.position.y = random(200, 500);
+
+	}
+
+	cloud4.position.x += .4*MP + cloud4.accum;
+	if(cloud4.position.x >= windowWidth){
+		cloud4.position.x=0
+		cloud4.position.y = random(100, 600);
+
+	}
+
+	cloud5.position.x += 3*MP + cloud5.accum;
+	if(cloud5.position.x >= windowWidth){
+		cloud5.position.x=0
+		cloud5.position.y = random(100, 200);
 
 	}
 
