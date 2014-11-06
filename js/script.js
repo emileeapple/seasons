@@ -47,7 +47,7 @@ function draw(){
 	grad.rotation += MP;
 
 
-	fgrad = map(MP,-1,1,0,1);
+	fgrad = map(MP,0,1,0,1);
 
 	if(winter.opacity <= .01){
 		winter.opacity = fgrad * -1;
