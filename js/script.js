@@ -10,11 +10,11 @@ var wo;
 var fgrad;
 var cloud;
 
-function preload(){
- night = loadSound('../Sounds/ambient_night.mp3');
- day = loadSound('../Sounds/birds.wav');
+// function preload(){
+//  night = loadSound('../Sounds/ambient_night.mp3');
+//  day = loadSound('../Sounds/birds.wav');
 
-};
+// };
 
 function setup(){
 	createCanvas(windowWidth, windowHeight);
